@@ -8,10 +8,24 @@
 
 <body>
 	    
+  <script>
+        // Function to write "DOM load success" to the body
+        function writeSuccessMessage() {
+            // Create a new paragraph element
+            var paragraph = document.createElement("p");
 
+            // Set its text content to "DOM load success"
+            paragraph.textContent = "DOM load success";
+
+            // Append the paragraph to the body
+            document.body.appendChild(paragraph);
+        }
+
+        // Add an event listener for DOMContentLoaded
+        document.addEventListener("DOMContentLoaded", writeSuccessMessage);
+    </script>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  
 
 </body>
 
