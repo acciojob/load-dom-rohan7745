@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <title>DOM Load Example</title>
 </head>
-
 <body>
-	    
-  <script>
-        // Function to write "DOM load success" to the body
-        function writeSuccessMessage() {
-            // Create a new paragraph element
-            var paragraph = document.createElement("p");
+    <!-- Your HTML content here -->
 
-            // Set its text content to "DOM load success"
-            paragraph.textContent = "DOM load success";
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the body element
+            const body = document.body;
 
-            // Append the paragraph to the body
-            document.body.appendChild(paragraph);
-        }
+            // Remove any existing child elements from the body
+            while (body.firstChild) {
+                body.removeChild(body.firstChild);
+            }
 
-        // Add an event listener for DOMContentLoaded
-        document.addEventListener("DOMContentLoaded", writeSuccessMessage);
+            // Create a new text node containing "DOM load success"
+            const textNode = document.createTextNode("DOM load success");
+
+            // Append the text node to the body
+            body.appendChild(textNode);
+        });
     </script>
-	<!-- the entire body must be written by student -->
-  
-
 </body>
-
 </html>
